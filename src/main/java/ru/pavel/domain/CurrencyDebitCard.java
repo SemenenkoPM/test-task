@@ -1,11 +1,23 @@
 package ru.pavel.domain;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@RequiredArgsConstructor
 
 @Data
-public class CurrencyDebitCard extends BankingProducts{
-
-    public CurrencyDebitCard(String name, String currency, double balance) {
-        super(name, currency, balance);
-    }
+@Entity
+public class CurrencyDebitCard {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    private String name;
+    private String currency;
+    private double balance;
 }
