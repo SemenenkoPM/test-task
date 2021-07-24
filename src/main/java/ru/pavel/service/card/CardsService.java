@@ -1,10 +1,10 @@
-package ru.pavel.service.cardsservice;
+package ru.pavel.service.card;
 
-import ru.pavel.domain.BankingProducts;
+import ru.pavel.domain.BankingProduct;
 import ru.pavel.service.ProductsService;
 
 public interface CardsService extends ProductsService {
-    default void debitFromBankProduct(BankingProducts product, double amount) {
+    default void debitFromBankProduct(BankingProduct product, double amount) {
         product.setBalance(product.getBalance() - amount);
     }
 }

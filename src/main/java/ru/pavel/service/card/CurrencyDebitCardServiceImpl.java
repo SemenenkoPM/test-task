@@ -1,4 +1,4 @@
-package ru.pavel.service.cardsservice;
+package ru.pavel.service.card;
 
 import ru.pavel.service.ProductsService;
 
