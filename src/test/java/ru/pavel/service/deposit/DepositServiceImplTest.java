@@ -7,7 +7,7 @@ import ru.pavel.domain.Deposit;
 
 @DisplayName("Класс DepositServiceImpl должен корректно: ")
 public class DepositServiceImplTest {
-    private final Deposit deposit = new Deposit("deposit", "RUB", 0);
+    private final Deposit deposit = new Deposit("deposit", "RUB", 0.0);
     private final DepositService depositService = new DepositServiceImpl();
     private final static double AMOUNT = 20.0;
 
